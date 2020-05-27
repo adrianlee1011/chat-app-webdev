@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+<h1 id="greetings">Hello Guest!</h1>
+    <form id="user-input">
+        <input type="text" id="username">
+        <input type="submit">
+    </form>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='index.js') }}"></script>
+{% endblock %}
