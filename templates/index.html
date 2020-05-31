@@ -8,6 +8,11 @@
         <input type="text" id="username">
         <input type="submit">
     </form>
+
+<form action="{{ url_for('index') }}" id="create-room" method="POST">
+    <input type="text" id="room-name" name="room-name">
+    <button type="submit" id="new-room-btn">Create Room</button>
+</form>
 {% endblock %}
 
 {% block scripts %}

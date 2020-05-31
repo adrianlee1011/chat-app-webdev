@@ -6,11 +6,13 @@ Chat
 
 {% block body %}
 <ul id="chats">
-
+    {% for message in messages %}
+    <li>{{ message['username'] }} at {{ message['time'] }}: {{ message['message'] }}</li>
+    {% endfor %}
 </ul>
 <form id="chatbox">
     <textarea id="message"></textarea>
-    <input type="submit">
+    <input type="submit" id="submit">
 </form>
 {% endblock %}
 
